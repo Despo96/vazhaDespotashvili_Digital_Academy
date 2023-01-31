@@ -175,3 +175,52 @@ button {
   align-items: center;
   padding-left: 20px;
 }
+
+@media all and (max-height: 768px) {
+  .iPhone {
+    height: 500px;
+    width: auto;
+  }
+  .calculator {
+    height: 450px;
+    width: 220px;
+  }
+  .operator,
+  .number,
+  .empty {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border-width: 0;
+
+    font-size: 1.2rem;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+  }
+  .operator:active {
+    background-color: #b5b5b5;
+    font-size: 1.4rem;
+  }
+
+  .number:active {
+    background-color: #464646;
+    font-size: 1.4rem;
+  }
+
+  .zeroOperation:active {
+    background-color: #464646;
+    font-size: 1.4rem;
+  }
+
+  .zeroOperation {
+    background-color: var(--color-darkgray);
+    width: 90px;
+    height: 45px;
+
+    color: #fff;
+    border-radius: 50px;
+    border-width: 0;
+
+    font-size: 1.2rem;
+  }
+}
