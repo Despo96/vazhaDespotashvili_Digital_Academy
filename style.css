@@ -176,7 +176,7 @@ button {
   padding-left: 20px;
 }
 
-@media all and (max-height: 768px) {
+@media all and (max-height: 700px) {
   .iPhone {
     height: 500px;
     width: auto;
