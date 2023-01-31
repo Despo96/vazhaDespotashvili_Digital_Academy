@@ -1,7 +1,7 @@
 :root {
   --color-black: #000000;
-  --color-orange: #F69906;
-  --color-gray: #9F9F9F;
+  --color-orange: #f69906;
+  --color-gray: #9f9f9f;
   --color-darkgray: #313131;
 }
 
@@ -19,12 +19,12 @@ body {
   display: flex;
   align-items: center;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
@@ -37,10 +37,9 @@ button {
   left: 0;
   right: 0;
 
-  width: 400px;
+  width: 350px;
   height: auto;
   margin: auto;
-
 
   display: flex;
   justify-content: center;
@@ -53,14 +52,14 @@ button {
 }
 
 .calculator {
-  width: 380px;
-  height: 700px;
+  width: 320px;
+  height: 600px;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 10px;
 }
 
 .result {
@@ -75,7 +74,7 @@ button {
   text-align: right;
   height: 50px;
   margin: 0 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .output {
@@ -84,13 +83,13 @@ button {
   height: 100px;
   margin: 0 20px;
 
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .keyboard {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .rows {
@@ -101,35 +100,27 @@ button {
 .operator,
 .number,
 .empty {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
 
   border-radius: 50%;
   border-width: 0;
 
-  font-size: 2rem;
+  font-size: 1.7rem;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
 }
 
-
 .zeroOperation {
   background-color: var(--color-darkgray);
-  width: 158px;
-  height: 75px;
+  width: 136px;
+  height: 60px;
 
   color: #fff;
   border-radius: 50px;
   border-width: 0;
 
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
-
-
-.fifthRow {
-  display: flex;
-
-}
-
 
 .number,
 .operator,
@@ -146,12 +137,12 @@ button {
 
 .operator:active {
   background-color: #b5b5b5;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
 
 .number:active {
   background-color: #464646;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
 
 .buttonOrange:active {
@@ -160,15 +151,8 @@ button {
 
 .zeroOperation:active {
   background-color: #464646;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
-
-/* .operator:focus,
-.number:focus,
-.empty:focus,
-.zeroOperation:focus {
-  outline: 0;
-} */
 
 .buttonGray {
   background-color: var(--color-gray);
