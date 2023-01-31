@@ -1,37 +1,33 @@
-// const numbersTotal = [4, 11, 42, 72, 25, 7, 8];
+const buttons = document.querySelectorAll(".number, .operator");
+const displayOutput = document.querySelector(".output-value");
+const displayHistory = document.querySelector("#history-value");
+let history = "";
+let output = "";
+let evaluate = "";
 
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const value = e.target.innerText;
 
-// function average(arr) {
-//     let total = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         total += arr[i];
-//     }
-//     const result = Math.round(total / arr.length);
-//     return result
-// };
-
-// console.log(average(numbersTotal));
-
-
-function minMax(arr) {
-    let min = arr[0];
-    let max = arr[0];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-        if (arr[i] < min) {
-            min = arr[i];
-        }
+    if (value === "AC") {
+      displayHistory.innerText = "";
+      displayOutput.innerText = "";
+      history = "";
+      output = "";
+      evaluate = "";
+    } else if (value === "C") {
+      displayOutput.innerText = "";
+      output = "";
+    } else if (value === "=") {
+      displayHistory.innerText = history;
+      evaluate = output;
+      if (evaluate) {
+        displayOutput.innerText = eval(evaluate);
+      }
+    } else {
+      output += value;
+      displayOutput.innerText = output;
+      history += value;
     }
-    return {
-        min: min,
-        max: max
-    };
-}
-
-let numbers = [4, 11, 42, 72, 25, 7, 8, 822, 34, 54, 75];
-let result = minMax(numbers);
-console.log("Min:", result.min);
-console.log("Max:", result.max);
+  });
+});

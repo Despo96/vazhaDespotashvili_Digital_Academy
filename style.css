@@ -26,7 +26,6 @@ body {
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-
 }
 
 .iPhone {
@@ -65,16 +64,16 @@ button {
 }
 
 .result {
-  height: 7rem;
+  height: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 40px;
+  gap: 10px;
 }
 
 .history {
   text-align: right;
-  height: 10px;
+  height: 50px;
   margin: 0 20px;
   font-size: 2rem;
 }
@@ -138,6 +137,13 @@ button {
   cursor: pointer;
 }
 
+.number:hover,
+.operator:hover,
+.zeroOperation:hover {
+  scale: 1.04;
+  box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.2);
+}
+
 .operator:active {
   background-color: #b5b5b5;
   font-size: 2.2rem;
@@ -157,12 +163,12 @@ button {
   font-size: 2.2rem;
 }
 
-.operator:focus,
+/* .operator:focus,
 .number:focus,
 .empty:focus,
 .zeroOperation:focus {
   outline: 0;
-}
+} */
 
 .buttonGray {
   background-color: var(--color-gray);
