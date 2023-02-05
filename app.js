@@ -1,33 +1,31 @@
-const buttons = document.querySelectorAll(".number, .operator");
-const displayOutput = document.querySelector(".output-value");
-const displayHistory = document.querySelector("#history-value");
-let history = "";
-let output = "";
-let evaluate = "";
+(function () {
+  let screen = document.querySelector('.screen');
+  let buttons = document.querySelectorAll('.btn');
+  let equal = document.querySelector('.equal');
+  let clearAll = document.querySelector('.clearAll');
+  let clear = document.querySelector('.clear');
 
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const value = e.target.innerText;
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      let value = e.target.dataset.num;
+      screen.value += value;
+    });
+  });
 
-    if (value === "AC") {
-      displayHistory.innerText = "";
-      displayOutput.innerText = "";
-      history = "";
-      output = "";
-      evaluate = "";
-    } else if (value === "C") {
-      displayOutput.innerText = "";
-      output = "";
-    } else if (value === "=") {
-      displayHistory.innerText = history;
-      evaluate = output;
-      if (evaluate) {
-        displayOutput.innerText = eval(evaluate);
-      }
+  equal.addEventListener('click', function (e) {
+    if (screen.value === '') {
+      screen.value = 'Please Enter';
     } else {
-      output += value;
-      displayOutput.innerText = output;
-      history += value;
+      let answer = eval(screen.value);
+      screen.value = answer;
     }
   });
-});
+
+  clearAll.addEventListener('click', () => {
+    screen.value = '';
+  });
+
+  clear.addEventListener('click', () => {
+    screen.value = screen.value.slice(0, -1);
+  });
+})();

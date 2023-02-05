@@ -1,227 +1,68 @@
-:root {
-  --color-black: #000000;
-  --color-orange: #f69906;
-  --color-gray: #9f9f9f;
-  --color-darkgray: #313131;
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #000000;
-  height: 100vh;
-  color: #fff;
-
   display: flex;
-  align-items: center;
-
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-
-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-
-.iPhone {
-  box-sizing: border-box;
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  width: 350px;
-  height: auto;
-  margin: auto;
-
-  display: flex;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  z-index: -1;
-}
-
-.container {
-  margin: auto;
 }
 
 .calculator {
-  width: 320px;
-  height: 600px;
-  margin: 0 auto;
-
+  width: 300px;
+  height: 500px;
+  background-color: #2f3e53;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 10px;
+  gap: 20px;
 }
 
-.result {
-  height: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.history {
+.screen {
+  width: 100%;
+  height: 130px;
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #1b2431;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
   text-align: right;
-  height: 50px;
-  margin: 0 20px;
-  font-size: 1.5rem;
+  pointer-events: none;
 }
 
-.output {
-  text-align: right;
-
-  height: 100px;
-  margin: 0 20px;
-
-  font-size: 3rem;
-}
-
-.keyboard {
+.row {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
-.rows {
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
   display: flex;
   justify-content: space-evenly;
 }
 
-.operator,
-.number,
-.empty {
+button {
   width: 60px;
-  height: 60px;
-
-  border-radius: 50%;
-  border-width: 0;
-
-  font-size: 1.7rem;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-}
-
-.zeroOperation {
-  background-color: var(--color-darkgray);
-  width: 136px;
-  height: 60px;
-
-  color: #fff;
-  border-radius: 50px;
-  border-width: 0;
-
-  font-size: 1.7rem;
-}
-
-.number,
-.operator,
-.zeroOperation {
+  height: 52px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
-.number:hover,
-.operator:hover,
-.zeroOperation:hover {
-  scale: 1.04;
-  box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.2);
+.btn-yellow {
+  background-color: yellow;
 }
 
-.operator:active {
-  background-color: #b5b5b5;
-  font-size: 1.9rem;
+.equal {
+  width: 133px;
 }
-
-.number:active {
-  background-color: #464646;
-  font-size: 1.9rem;
-}
-
-.buttonOrange:active {
-  background-color: #e9c385;
-}
-
-.zeroOperation:active {
-  background-color: #464646;
-  font-size: 1.9rem;
-}
-
-.buttonGray {
-  background-color: var(--color-gray);
-  color: #fff;
-}
-
-.buttonOrange {
-  background-color: var(--color-orange);
-  color: #fff;
-}
-
-.number {
-  background-color: var(--color-darkgray);
-  color: #fff;
-}
-
-#zero {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 20px;
-}
-
-@media all and (max-width: 1368px) {
-  .iPhone {
-    height: 500px;
-    width: auto;
-  }
-  .calculator {
-    height: 450px;
-    width: 220px;
-    padding-bottom: 15px;
-  }
-  .operator,
-  .number,
-  .empty {
-    width: 40px;
-    height: 40px;
-
-    border-radius: 50%;
-    border-width: 0;
-
-    font-size: 1.2rem;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-  }
-  .operator:active {
-    background-color: #b5b5b5;
-    font-size: 1.4rem;
-  }
-
-  .number:active {
-    background-color: #464646;
-    font-size: 1.4rem;
-  }
-
-  .zeroOperation:active {
-    background-color: #464646;
-    font-size: 1.4rem;
-  }
-
-  .zeroOperation {
-    background-color: var(--color-darkgray);
-    width: 90px;
-    height: 45px;
-
-    color: #fff;
-    border-radius: 50px;
-    border-width: 0;
-
-    font-size: 1.2rem;
-  }
-} ;
