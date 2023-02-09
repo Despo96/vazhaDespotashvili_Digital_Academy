@@ -4,51 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Cameras</title>
   </head>
   <body>
-    <div class="calbox">
-      <div class="calculator">
-        <input type="text" class="screen" />
-        <div class="buttons row">
-          <div class="row1">
-            <button type="button" class="btn-yellow clearAll">AC</button>
-            <button type="button" class="btn-yellow clear">C</button>
-            <button type="button" class="btn-yellow percentage">%</button>
-            <button type="button" class="btn-yellow divide">/</button>
-          </div>
-
-          <div class="row2">
-            <button type="button" class="btn" data-num="7">7</button>
-            <button type="button" class="btn" data-num="8">8</button>
-            <button type="button" class="btn" data-num="9">9</button>
-            <button type="button" class="btn btn-yellow" data-num="*">*</button>
-          </div>
-
-          <div class="row3">
-            <button type="button" class="btn" data-num="4">4</button>
-            <button type="button" class="btn" data-num="5">5</button>
-            <button type="button" class="btn" data-num="6">6</button>
-            <button type="button" class="btn btn-yellow" data-num="-">-</button>
-          </div>
-
-          <div class="row4">
-            <button type="button" class="btn" data-num="1">1</button>
-            <button type="button" class="btn" data-num="2">2</button>
-            <button type="button" class="btn" data-num="3">3</button>
-            <button type="button" class="btn btn-yellow" data-num="+">+</button>
-          </div>
-
-          <div class="row5">
-            <button type="button" class="btn" data-num="0">0</button>
-            <button type="button" class="btn" data-num=".">.</button>
-            <button type="button" class="btn-yellow equal">=</button>
-
-            <script src="./app.js"></script>
-          </div>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <a href="#"><h2>Logo</h2></a>
         </div>
+        <ul class="menu">
+          <li class="menuList">
+            <a class="menuListLink" href="#">About</a>
+          </li>
+          <li class="menuList">
+            <a class="menuListLink" href="#">Collection</a>
+          </li>
+          <li class="menuList">
+            <a class="menuListLink" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="contentHeader">
+          <div class="contentTitle"><h1>Future Camera</h1></div>
+        </div>
+        <div class="filter">
+          <div class="btn"><a href="#" class="btnColor">DSLR</a></div>
+          <div class="btn"><a href="#" class="btnColor">MirrorLess</a></div>
+          <div class="btn"><a href="#" class="btnColor">Cinema</a></div>
+        </div>
+        
+          <div class="cardContainer">
+            
+          </div>
+      
       </div>
     </div>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./main.js"></script>
   </body>
 </html>
