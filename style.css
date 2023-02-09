@@ -110,6 +110,11 @@ a {
   background-color: #ececec;
 }
 
+.addButton:hover{
+  background-color: #c7c7c7;
+}
+
+
 .addColor {
   color: #ff8b13;
   font-weight: 700;
