@@ -128,6 +128,6 @@ searchInput.addEventListener("input",  () => {
     );
   });
 
-  // console.log(catCamera);
+  
   cardContainer.innerHTML = catCamera.map((item) => renderItem(item)).join('');
 });
