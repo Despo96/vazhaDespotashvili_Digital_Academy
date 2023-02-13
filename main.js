@@ -124,10 +124,11 @@ searchInput.addEventListener("input",  () => {
     return (
       camera.title.toLowerCase().includes(Value) ||
       camera.subTitle.toLowerCase().includes(Value) ||
-      camera.category.toLowerCase().includes(Value)
+      camera.category.toLowerCase().includes(Value) ||
+      camera.price.toString().includes(Value)
     );
   });
 
-  
+
   cardContainer.innerHTML = catCamera.map((item) => renderItem(item)).join('');
 });
