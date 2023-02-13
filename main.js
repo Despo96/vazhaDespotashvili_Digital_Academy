@@ -1,3 +1,4 @@
+
 const cameraItems = [
     {
       cameraUrl:
@@ -14,7 +15,7 @@ const cameraItems = [
         'https://static.bhphoto.com/images/multiple_images/images500x500/1656328551_IMG_1782613.jpg',
       title: 'BlackMagic Pocket 6K',
       subTitle:
-        'To top their previous achievement with the Pocket Cinema Camera 6K, compact Super35 camera to their cine-style line with the Pocket Cinema .',
+        'To top their previous achievement with the Pocket Cinema Camera 6K, compact Super35 camera to their cine-style line with the Pocket Cinema.',
   
       category: 'Cinema',
       price: `2,535.00`,
@@ -65,7 +66,9 @@ const cameraItems = [
   ];
   
 const maincontainer = document.querySelector('.cardContainer')
-const render = cameraItems.map((item)=>{
+
+
+const renderItem = (item)=>{
     return `<div class="card-1">
         <img
         src=${item.cameraUrl}
@@ -73,7 +76,7 @@ const render = cameraItems.map((item)=>{
         />
         <div class="cardInfo">
         <div class="cardTitle"><h3>${item.title}</h3></div>
-        <div class="category">${item.category}</div>
+        <div class="category ${item.category}">${item.category}</div>
         <div class="cardSubtitle">
             <p>
             ${item.subTitle}
@@ -84,11 +87,47 @@ const render = cameraItems.map((item)=>{
         <button class="addButton"><a href="#" class="addColor"> Add to Cart</a></button>
         </div>
     </div>`
-})
+};
 
 
-maincontainer.innerHTML = render.join('');
+const cardContainer = document.querySelector(".cardContainer");
 
 
 
+cardContainer.innerHTML = cameraItems.map((item) => renderItem(item)).join('');
 
+
+
+const btn = document.querySelectorAll(".btn");
+
+const btns = [...btn];
+// კატეგორიის ღილაკები
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // console.log(btn.textContent);
+    if (btn.textContent === "All") {
+      cardContainer.innerHTML = cameraItems.map((item) => renderItem(item)).join('');
+      return;
+    }
+
+    let filtered = cameraItems.filter((cameraItemsFilter) => cameraItemsFilter.category === btn.textContent);
+
+    cardContainer.innerHTML = filtered.map((item) => renderItem(item)).join('');
+  });
+});
+
+// საძიებო ველი
+const searchInput = document.querySelector('.searchInput')
+searchInput.addEventListener("input",  () => {
+  const Value = searchInput.value.toLowerCase();
+  const catCamera = cameraItems.filter(function (camera) {
+    return (
+      camera.title.toLowerCase().includes(Value) ||
+      camera.subTitle.toLowerCase().includes(Value) ||
+      camera.category.toLowerCase().includes(Value)
+    );
+  });
+
+  // console.log(catCamera);
+  cardContainer.innerHTML = catCamera.map((item) => renderItem(item)).join('');
+});
