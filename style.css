@@ -46,20 +46,19 @@ a {
   display: flex;
   justify-content: center;
   gap: 26px;
-
 }
 
 .btnColor {
   color: black;
 }
 
-.mainCardContainer{
+.mainCardContainer {
   background-color: black;
   width: 100%;
 }
 
 .cardContainer {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 50px;
@@ -81,7 +80,6 @@ a {
   justify-content: center;
   align-items: center;
 
-
   padding: 20px;
   width: 340px;
 
@@ -89,7 +87,7 @@ a {
   border-radius: 20px;
 }
 
-.card-1  p {
+.card-1 p {
   font-weight: 500;
   line-height: 1.5rem;
 }
@@ -108,13 +106,13 @@ a {
   margin: 10px auto;
   border: none;
   background-color: #ececec;
+  cursor: pointer;
 }
 
-.addButton:hover{
+.addButton:hover {
   background-color: #c7c7c7;
   transition: all 0.3s;
 }
-
 
 .addColor {
   color: #ff8b13;
@@ -132,13 +130,13 @@ a {
   gap: 5px;
 }
 
-.searchInput{
+.searchInput {
   padding: 2px;
   border: none;
   border-radius: 4px;
-} 
+}
 
-.searchButton{
+.searchButton {
   width: 60px;
   border-radius: 4px;
   height: auto;
@@ -151,4 +149,29 @@ a {
 .searchButton:hover {
   background-color: #ffb362;
   transition: all 0.3s;
+}
+
+.cartHidden,
+.cartNumberHidden {
+  display: none;
+}
+
+.cart {
+  width: 50px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.cardTitleLength {
+  display: flex;
+  justify-content: center;
+}
+
+.cartWrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
